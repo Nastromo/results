@@ -11,7 +11,7 @@ export class App extends Component {
     render() {
         return (
             <Router>
-                <div className="App">
+                <div>
                     <Notification />
                     <Switch>
                         <Route path="/account" component={PrivateRoute} />
