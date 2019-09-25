@@ -1823,3 +1823,44 @@ p.logo-text:hover {
 .grey-btn:active {
     background: #c0c0c0;
 }
+
+.padff {
+    margin: 15px;
+    padding: 15px;
+    background: #fff;
+}
+
+.nav-it-act {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #12a588;
+    padding: 5px 20px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border: 1px solid #dadada;
+    border-bottom: 1px solid #fff;
+    cursor: pointer;
+}
+
+.nav-it-no {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #3f3f3f;
+    padding: 5px 20px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.basis30 {
+    flex-basis: 30%;
+}
+
+.basis70 {
+    flex-basis: 70%;
+}
+
+.marg-rtds {
+    margin-right: 15px;
+}
