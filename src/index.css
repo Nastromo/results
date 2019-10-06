@@ -1864,3 +1864,18 @@ p.logo-text:hover {
 .marg-rtds {
     margin-right: 15px;
 }
+
+.print {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    background: #56dbc1;
+    border-radius: 3px;
+    height: 27px;
+    padding: 0 10px;
+    width: 100px;
+    margin: 0 0 15px 0;
+}

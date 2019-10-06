@@ -63,6 +63,7 @@ export class InstrumsList extends Component {
     renderList = (list, text) => {
         return (
             <div className="content-table small-t basis70">
+            <div className="print">Print</div>
                 <ReactTable
                     data={list}
                     getTdProps={this.handleRowClick}

@@ -18,7 +18,7 @@ export class Pending extends Component {
                 {
                     this.props.depsList.map((item, i) => {
                         return (
-                            <div onClick={this.changeTab} id={i} className={item.isActive ? `nav-it-act` : `nav-it-no`}>
+                            <div onClick={this.changeTab} id={i} key={i} className={item.isActive ? `nav-it-act` : `nav-it-no`}>
                                 {item.name}
                             </div>
                         )

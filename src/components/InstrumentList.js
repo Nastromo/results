@@ -2,11 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ReactTable from "react-table";
 import '../table.css';
+import { getPends } from '../store/actions/Pends';
 
 
 
 
 export class InstrumsList extends Component {
+    componentDidMount() {
+        this.props.getPends();
+    }
 
     initColumns = () => {
         return [
@@ -64,13 +68,12 @@ export class InstrumsList extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    // list: state.tests,
-    list: [],
+    list: state.pends,
     selected: state.activeTestRow,
 })
 
 const mapDispatchToProps = dispatch => ({
-
+    getPends: () => dispatch(getPends())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(InstrumsList)
