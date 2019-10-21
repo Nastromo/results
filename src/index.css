@@ -165,6 +165,21 @@ button {
     width: 100%;
 }
 
+.blue-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    width: 120px;
+    height: 35px;
+    background: #41a4d1;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    box-sizing: border-box;
+}
+
 .green-btn {
     display: flex;
     justify-content: center;
@@ -1801,6 +1816,10 @@ p.logo-text:hover {
     margin-right: 20px;
 }
 
+.mfjhg {
+    margin: 10px 0;
+}
+
 .grey-btn {
     display: flex;
     justify-content: center;
@@ -1878,4 +1897,16 @@ p.logo-text:hover {
     padding: 0 10px;
     width: 100px;
     margin: 0 0 15px 0;
+}
+
+.ju-end {
+    justify-content: flex-end;
+}
+
+.marg-r15 {
+    margin: 0 15px 0 0;
+}
+
+.mgh {
+    margin: 15px 0 0 0;
 }

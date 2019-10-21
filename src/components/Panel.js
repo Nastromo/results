@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { changeComment } from '../store/actions/Panel';
 
 
 
@@ -25,20 +26,21 @@ export class Panel extends Component {
                     <div style={{ marginTop: '10px' }}>
                         <textarea
                             className="gross-other"
-                            value=""
+                            value={this.props.test.comment}
                             placeholder="Comment"
                             onChange={this.props.changeComment}
                         ></textarea>
                     </div>
                 </div>
                 <div className="flex ju-btw">
-                    <div className="green-btn">Prelim Test</div>
-                    <div className="green-btn">Finalize Test</div>
-                    <div className="green-btn">Hold Test</div>
-                    <div className="green-btn">Cancel Test</div>
-                    <div className="green-btn">Delete test</div>
-                    <div className="green-btn">Audit</div>
-                    <div className="green-btn">Clear</div>
+                    <div className="blue-btn">Prelim Test</div>
+                    <div className="blue-btn">Finalize Test</div>
+                    <div className="blue-btn">Hold Test</div>
+                    <div className="blue-btn">Cancel Test</div>
+                    <div className="blue-btn">Audit</div>
+                </div>
+                <div className="flex ju-end mgh">
+                    <div className="grey-btn marg-r15">Clear</div>
                     <div className="green-btn">Submit</div>
                 </div>
             </div>
@@ -47,11 +49,11 @@ export class Panel extends Component {
 }
 
 const mapStateToProps = (state) => ({
-
+    test: state.test
 })
 
-const mapDispatchToProps = {
-
-}
+const mapDispatchToProps = dispatch => ({
+    changeComment: (e) => dispatch(changeComment(e))
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(Panel)

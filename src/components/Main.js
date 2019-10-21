@@ -4,6 +4,7 @@ import SearchInput from './SearchInput';
 import TestList from './TestList';
 import Panel from './Panel';
 import ElementList from './ElementList';
+import { setTests } from '../store/actions/Results';
 
 
 
@@ -18,12 +19,12 @@ export class Main extends Component {
                     id="accession"
                     type="text"
                     view="search-input"
-                    url="specimens"
-                    onItemClick={this.props.getAccession}
+                    url="accession"
+                    onItemClick={this.props.setTests}
                     isLoading={this.props.isLoadAcc}
                     searchQuery={this.props.searchAcc}
-                    searchResults={this.props.accessions} />
-                <div className="flex ju-btw">
+                    searchResults={this.props.accession} />
+                <div className="flex ju-btw mfjhg">
                     <div>
                         <p className="title-input">Name:</p>
                         <p>{this.props.acc.name}</p>
@@ -31,22 +32,22 @@ export class Main extends Component {
 
                     <div>
                         <p className="title-input">DOB:</p>
-                        <p>{this.props.acc.name}</p>
+                        <p>{this.props.acc.dob}</p>
                     </div>
 
                     <div>
                         <p className="title-input">Sex:</p>
-                        <p>{this.props.acc.name}</p>
+                        <p>{this.props.acc.sex}</p>
                     </div>
 
                     <div>
                         <p className="title-input">Client:</p>
-                        <p>{this.props.acc.name}</p>
+                        <p>{this.props.acc.clientLocationId}</p>
                     </div>
 
                     <div>
                         <p className="title-input">Physician:</p>
-                        <p>{this.props.acc.name}</p>
+                        <p>{this.props.acc.physicianId}</p>
                     </div>
                 </div>
 
@@ -61,14 +62,14 @@ export class Main extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    acc: {},
-    isLoadAcc: state.searchLoading.accessions,
-    searchAcc: state.searchQuery.accessions,
-    accessions: state.searchResults.accessions,
+    acc: state.acc,
+    isLoadAcc: state.searchLoading.accession,
+    searchAcc: state.searchQuery.accession,
+    accession: state.searchResults.accession,
 })
 
-const mapDispatchToProps = {
-
-}
+const mapDispatchToProps = dispatch => ({
+    setTests: (e) => dispatch(setTests(e)),
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(Main)

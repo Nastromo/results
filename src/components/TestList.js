@@ -16,7 +16,7 @@ export class TestList extends Component {
             },
             {
                 Header: 'Test Description',
-                accessor: 'description',
+                accessor: 'desc',
             },
             {
                 Header: 'Date',
@@ -40,7 +40,7 @@ export class TestList extends Component {
     handleRowClick = (state, rowInfo, column, instance) => {
         if (rowInfo) {
             return {
-                onClick: (e, handleOriginal) => this.props.showInstrum(Number(rowInfo.index)),
+                // onClick: (e, handleOriginal) => this.props.showInstrum(Number(rowInfo.index)),
                 style: {
                     fontWeight: rowInfo.index === this.props.selected ? '700' : '600',
                     color: rowInfo.index === this.props.selected ? '#1ab394' : '#4e4e4e',
@@ -81,8 +81,7 @@ export class TestList extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    // list: state.tests,
-    list: [],
+    list: state.tests,
     selected: state.activeTestRow,
 })
 
