@@ -54,7 +54,7 @@ export class ElementList extends Component {
 
     renderList = (list, text) => {
         return (
-            <div className="content-table small-t basis50">
+            <div className="content-table small-t marg-ri-20 basis50">
                 <ReactTable
                     data={list}
                     getTdProps={this.handleRowClick}

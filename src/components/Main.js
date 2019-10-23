@@ -52,9 +52,16 @@ export class Main extends Component {
                 </div>
 
                 <TestList />
+                <div className="flex ju-btw width100 marghj">
+                    <div className="blue-btn">Prelim Test</div>
+                    <div className="blue-btn">Finalize Test</div>
+                    <div className="blue-btn">Hold Test</div>
+                    <div className="blue-btn">Cancel Test</div>
+                    <div className="blue-btn">Audit</div>
+                </div>
                 <div className="flex ju-btw mar-top-20">
-                    <Panel />
                     <ElementList />
+                    <Panel />
                 </div>
             </div>
         )

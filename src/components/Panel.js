@@ -9,7 +9,7 @@ export class Panel extends Component {
 
     render() {
         return (
-            <div className="basis50 marg-ri-20">
+            <div className="basis50">
                 <p className="title-input">Basic Metabolic Panel:</p>
                 <div className="flex ju-btw algn-center">
                     <p className="title-input">Result:</p>
@@ -32,13 +32,7 @@ export class Panel extends Component {
                         ></textarea>
                     </div>
                 </div>
-                <div className="flex ju-btw">
-                    <div className="blue-btn">Prelim Test</div>
-                    <div className="blue-btn">Finalize Test</div>
-                    <div className="blue-btn">Hold Test</div>
-                    <div className="blue-btn">Cancel Test</div>
-                    <div className="blue-btn">Audit</div>
-                </div>
+            
                 <div className="flex ju-end mgh">
                     <div className="grey-btn marg-r15">Clear</div>
                     <div className="green-btn">Submit</div>
