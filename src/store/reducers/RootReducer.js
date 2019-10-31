@@ -6,11 +6,13 @@ import { searchQuery, searchLoading, searchResults, activeRow } from '../reducer
 import { pends } from '../reducers/Pends';
 import { tests, acc } from '../reducers/Results';
 import { test } from '../reducers/Panel';
+import { comments } from '../reducers/Comments';
 
 
 
 
 const RootReducer = combineReducers({
+    comments,
     test,
     acc,
     tests,

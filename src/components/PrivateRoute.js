@@ -5,6 +5,7 @@ import LineSpinner from './LineSpinner';
 import Main from './Main';
 import Navigation from './Navigation';
 import Pending from './Pending';
+import Settings from './Settings';
 
 
 
@@ -21,6 +22,7 @@ export class PrivateRoute extends Component {
                 <Switch>
                     <Route exact path="/account/main" component={Main} />
                     <Route exact path="/account/pending" component={Pending} />
+                    <Route exact path="/account/settings" component={Settings} />
                     
                 </Switch>
             </div>

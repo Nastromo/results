@@ -60,6 +60,11 @@ export class Navigation extends Component {
                     </div>
 
                     <div className="work-info">
+                        <Link
+                            id="sett"
+                            onClick={this.handleClick}
+                            innerRef={el => this.settings = el}
+                            to="/account/settings">Settings</Link>
                         <p className="nav-te" onClick={this.handleExit}>Log out</p>
                     </div>
                 </div>
@@ -69,12 +74,12 @@ export class Navigation extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    
+
 
 })
 
 const mapDispatchToProps = (dispatch) => ({
-    
+
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Navigation))
